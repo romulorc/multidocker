@@ -1,0 +1,18 @@
+cf6d829221a2
+bacd2d64f743
+d72632e6ddc5
+
+
+Attaching to complex_postgres_1
+postgres_1  | Error: Database is uninitialized and superuser password is not specified.
+postgres_1  |        You must specify POSTGRES_PASSWORD to a non-empty value for the
+postgres_1  |        superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+postgres_1  | 
+postgres_1  |        You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+postgres_1  |        connections without a password. This is *not* recommended.
+postgres_1  | 
+postgres_1  |        See PostgreSQL documentation about "trust":
+postgres_1  |        https://www.postgresql.org/docs/current/auth-trust.html
+complex_postgres_1 exited with code 1
+
+
