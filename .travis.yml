@@ -3,23 +3,23 @@ sudo: required
 services:
     - docker
 before_install:
-    - docker build -t romulorc/travis -f ./client/Dockerfile.dev ./client
+    - docker build -t romuloroca/travis -f ./client/Dockerfile.dev ./client
 script:
-    - docker run -e CI=true romulorc/travis npm test
+    - docker run -e CI=true romuloroca/travis npm test
 after_success:
-    - docker build -t romulorc/multidockertutorial-client ./client
-    - docker build -t romulorc/multidockertutorial-nginx ./nginx
-    - docker build -t romulorc/multidockertutorial-server ./server
-    - docker build -t romulorc/multidockertutorial-worker ./worker
+    - docker build -t romuloroca/multidockertutorial-client ./client
+    - docker build -t romuloroca/multidockertutorial-nginx ./nginx
+    - docker build -t romuloroca/multidockertutorial-server ./server
+    - docker build -t romuloroca/multidockertutorial-worker ./worker
     
     # Login to the Docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     
     # Retrieve those images and push to DockerHub
-    - docker push romulorc/multidockertutorial-client
-    - docker push romulorc/multidockertutorial-nginx
-    - docker push romulorc/multidockertutorial-server
-    - docker push romulorc/multidockertutorial-worker
+    - docker push romuloroca/multidockertutorial-client
+    - docker push romuloroca/multidockertutorial-nginx
+    - docker push romuloroca/multidockertutorial-server
+    - docker push romuloroca/multidockertutorial-worker
 deploy:
     edge: true,
     provider: elasticbeanstalk
