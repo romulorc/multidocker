@@ -1,11 +1,10 @@
 {
-    "dependencies": {
-        "nodemon": "2.0.7",
-        "redis": "latest"
-    },
-    "scripts": {
-        "preinstall": "npm i nodemon -g",
-        "start": "node index.js",
-        "dev":"nodemon"
-    }
+  "dependencies": {
+    "nodemon": "1.18.3",
+    "redis": "2.8.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon"
+  }
 }
